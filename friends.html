@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyanka's Royal Inner Circle</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: #050506;
+            color: #fff;
+            font-family: 'Cinzel', 'Georgia', serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 50px 20px;
+            overflow-x: hidden;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+            z-index: 1;
+        }
+        header h1 {
+            font-size: 36px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        header p {
+            font-size: 11px;
+            color: #a1a1aa;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 1150px;
+            position: relative;
+            z-index: 1;
+        }
+        .friend-card {
+            background: linear-gradient(145deg, #141416 0%, #080809 100%);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.8), inset 0 1px 2px rgba(255,255,255,0.05);
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .friend-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 50%; height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255, 253, 240, 0.1), transparent);
+            transition: all 0.6s ease;
+        }
+        .friend-card:hover::before {
+            left: 150%;
+        }
+        .friend-card:hover {
+            transform: translateY(-10px);
+            border-color: #d4af37;
+            box-shadow: 0 25px 50px rgba(212, 175, 55, 0.25);
+        }
+        .avatar-frame {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            margin: 0 auto 22px;
+            border: 2px solid transparent;
+            background: linear-gradient(#080809, #080809) padding-box,
+                        linear-gradient(135deg, #bf953f, #fcf6ba, #aa771c) border-box;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+            padding: 4px;
+        }
+        .ai-avatar {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .friend-name {
+            font-size: 19px;
+            color: #fffdf0;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        .vip-tag {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
+            color: #111;
+            padding: 5px 15px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>PRIYANKA'S ROYAL CIRCLE</h1>
+        <p>The VIP Lounge • Elite Member Registry</p>
+    </header>
+
+    <div class="gallery-grid">
+        <!-- 👩 L A D I E S   F I R S T -->
+        
+        <!-- Krina -->
+        <div class="friend-card">
+            <div class="avatar-frame">
+                <img class="ai-avatar" src="https://dicebear.com" alt="VIP">
+            </div>
+            <div class="friend-name">Krina</div>
+            <div class="vip-tag">BESTIE</div>
+        </div>
+
+        <!-- Azana -->
+        <div class="friend-card">
+            <div class="avatar-frame">
+                <img class="ai-avatar" src="https://dicebear.com" alt="VIP">
+            </div>
+            <div class="friend-name">Azana</div>
+            <div class="vip-tag">VIP GOLD</div>
+        </div>
+
+        <!-- Seema -->
+        <div class="friend-card">
+            <div class="avatar-frame">
+                <img class="ai-avatar" src="https://dicebear.com" alt="VIP">
+            </div>
+            <div class="friend-name">Seema</div>
+            <div class="vip-tag">LIFELINE</div>
+        </div>
+
+        <!-- Jahanvi -->
+        <div class="friend-card">
+            <div class="avatar-frame">
+                <img class="ai-avatar" src="https://dicebear.com" alt="VIP">
+            </div>
+            <div class="friend-name">Jahanvi</div>
+            <div class="vip-tag">SECRET KEEPER</div>
+        </div>
+
+        <!-- Janvi -->
+        <div class="friend-card">
+            <div class="avatar-frame">
+                <img class="ai-avatar" src="https://dicebear.com" alt="VIP">
+            </div>
+            <div class="friend-name">Janvi</div>
+            <div class="vip-tag">ROCKSTAR</div>
+        </div>
+
+        <!-- 👨 G E N T L E M E N -->
+
+        <!-- Shahnawaz -->
+        <div class="friend-card">
+            <div class="avatar-frame">
+                <img class="ai-avatar" src="https://dicebear.com" alt="VIP">
+            </div>
+            <div class="friend-name">Shahnawaz</div>
+            <div class="vip-tag">VIP ELITE</div>
+        </div>
+
+        <!-- Farhan -->
+        <div class="friend-card">
+            <div class="avatar-frame">
+                <img class="ai-avatar" src="https://dicebear.com" alt="VIP">
+            </div>
+            <div class="friend-name">Farhan</div>
+            <div class="vip-tag">CRIME PARTNER</div>
+        </div>
+
+        <!-- Zaid -->
+        <div class="friend-card">
+            <div class="avatar-frame">
+                <img class="ai-avatar" src="https://dicebear.com" alt="VIP">
+            </div>
+            <div class="friend-name">Zaid</div>
+            <div class="vip-tag">THE LEGEND</div>
+        </div>
+    </div>
+
+</body>
+  </html>
+  
